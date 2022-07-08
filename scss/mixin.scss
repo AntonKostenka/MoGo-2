@@ -1,0 +1,72 @@
+@mixin header {
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 100;
+   width: 100%;
+   padding: 30px 0 0;
+}
+@mixin logo {
+   font-size: 30px;
+   color: #fff;
+   font-weight: 700;
+}
+@mixin navLink {
+   position: relative;
+   display: inline-block;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 14px;
+   font-weight: 400;
+   vertical-align: top;
+   color: #fff;
+   text-transform: uppercase;
+   transition: color .2s linear;
+      &::after {
+         content: '';
+         display: block;
+         height: 2px;
+         width: 100%;
+         background-color: #fce38a;
+         opacity: 0;
+         transition: opacity .2s linear;
+      }
+      &:hover {
+         color: #fce38a;
+         &::after {
+            opacity: 1;
+         }
+      }
+}
+@mixin introTitle {
+   font-family: 'Montserrat', sans-serif;
+   font-size: 150px;
+   font-weight: bold;
+   line-height: 0.9;
+   color: #fff;
+   text-transform: uppercase;
+   text-align: center;
+}
+@mixin btn {
+   display: block;
+   width: 150px;
+   height: 40px;
+   border: 3px solid #fff;
+   margin: 0 auto;
+   padding: 8px 22px;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 14px;
+   font-weight: 700;
+   text-transform: uppercase;
+   text-align: center;
+   color: #fff;
+   background-color: inherit;
+   cursor: pointer;
+   transition: color .2s linear, border-color .2s linear,
+   background-color .2s linear;
+      &:hover {
+         color: #333;
+         border-color: #f38181;
+         background-color: #fff;
+      }
+   
+}
