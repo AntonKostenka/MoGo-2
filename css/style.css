@@ -232,7 +232,7 @@ body {
 
 .section__header {
   text-align: center;
-  margin: 0 auto 50px;
+  margin: 0 auto;
   width: 100%;
   width: 950px;
 }
@@ -262,6 +262,7 @@ body {
 }
 
 .about {
+  margin-top: 50px;
   display: flex;
   justify-content: space-between;
 }
@@ -313,4 +314,74 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
+}
+
+.facts {
+  background-color: #95e1d3;
+}
+
+.facts__inner {
+  display: flex;
+}
+
+.facts__item {
+  flex: 1 1 0;
+  border-left: 1px solid #b5eae0;
+  text-align: center;
+  color: #fff;
+  padding: 80px 0;
+}
+.facts__item .fact__count {
+  font-family: "Montserrat", sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.facts__item .fact__text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.facts__item:last-child {
+  border-right: 1px solid #b5eae0;
+}
+
+.services {
+  display: flex;
+  margin: 0 -25px;
+}
+
+.service__item {
+  width: 33.333%;
+  display: flex;
+  padding: 0 25px;
+}
+
+.service__img {
+  padding-top: 5px;
+  padding-left: 5px;
+  margin-right: 20px;
+}
+.service__img img {
+  width: 32px;
+  height: 28px;
+}
+
+.service__content h4 {
+  font-family: "Montserrat", sans-serif;
+  font-style: 14px;
+  text-transform: uppercase;
+}
+.service__content p {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #999999;
+  line-height: 1.6;
+}
+
+hr {
+  margin: 50px 0;
+  height: 1px;
+  background-color: #e5e5e5;
 }
