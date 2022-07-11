@@ -53,6 +53,7 @@ body {
   width: 1200px;
   max-width: 100%;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 .header {
@@ -125,6 +126,7 @@ body {
   max-width: 850px;
   margin: 0 auto;
   position: relative;
+  padding: 50px 0;
 }
 .intro__tittle h2 {
   font-family: "Kaushan Script", cursive;
@@ -174,7 +176,7 @@ body {
   border-color: #f38181;
   background-color: #fff;
 }
-/* Slider */
+
 .slider {
   position: absolute;
   left: 0;
@@ -186,7 +188,6 @@ body {
 .slider__inner {
   display: flex;
   justify-content: space-between;
-  margin-top: 50px;
 }
 .slider__inner .slider__item {
   position: relative;
@@ -223,4 +224,93 @@ body {
 }
 .slider__inner .slider__item:hover::before {
   opacity: 1;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section__header {
+  text-align: center;
+  margin: 0 auto 50px;
+  width: 100%;
+  width: 950px;
+}
+.section__header .section__suptittle {
+  font-family: "Kaushan Script", cursive;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.section__header .section__subtittle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.section__header .section__subtittle::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 60px;
+  background-color: #f38181;
+  margin: 30px auto;
+}
+.section__header .section__text {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #999999;
+  line-height: 1.6;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about__item {
+  position: relative;
+  width: 380px;
+  background-color: #95e1d3;
+}
+.about__item .about__img {
+  background: linear-gradient(to bottom, #f38181, #fce38a);
+  transition: transform 0.2s linear;
+}
+.about__item .about__img img {
+  display: block;
+  transition: opacity 0.2s linear;
+}
+.about__item:hover .about__content {
+  transform: translate(-10px, -10px);
+  opacity: 1;
+}
+.about__item:hover .about__img {
+  transform: translate(-10px, -10px);
+}
+.about__item:hover .about__img img {
+  opacity: 0.1;
+}
+.about__item .about__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s linear;
+  transition: transform 0.2s linear;
+}
+.about__item .about__content .about__icon {
+  align-self: center;
+}
+.about__item .about__content .about__text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
 }

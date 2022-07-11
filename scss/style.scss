@@ -1,3 +1,4 @@
+@import 'variables';
 @import 'reset';
 @import 'mixin';
 
@@ -10,6 +11,7 @@ body {
    width: 1200px;
    max-width: 100%;
    margin: 0 auto;
+   padding: 0 10px
 }
 // header
 .header {
@@ -47,6 +49,7 @@ body {
    max-width: 850px;
    margin: 0 auto;
    position: relative;
+   padding: 50px 0;
 
    h2 {
       font-family: 'Kaushan Script', cursive;
@@ -87,7 +90,6 @@ body {
 .slider__inner {
    display: flex;
    justify-content: space-between;
-   margin-top: 50px;
    .slider__item {
       position: relative;
       width: 24%;
@@ -117,7 +119,7 @@ body {
         display: block;
         width: 70px;
         height: 3px;
-        background-color: #f38181;
+        background-color: $lineColor;
         opacity: 0;
         transition: opacity .2s linear;
       }
@@ -126,3 +128,90 @@ body {
       }
    }
 }
+// section
+.section {
+   padding: 100px 0;
+
+}
+.section__header {
+   text-align: center;
+   margin: 0 auto 50px;
+   width: 100%;
+   width: 950px;
+   .section__suptittle {
+      @include sectionSupTittle;
+      margin-bottom: 20px;
+   }
+   .section__subtittle {
+      @include sectionSubTittle;
+         &::after {
+            @include line;
+            margin: 30px auto;
+         }
+   }
+   .section__text {
+      @include sectionText;
+   }
+}
+// about
+.about {
+   display: flex;
+   justify-content: space-between;
+}
+.about__item {
+   position: relative;
+   width: 380px;
+   background-color: $cardColor;
+
+   .about__img {
+      background: linear-gradient(to bottom, #f38181, #fce38a);
+      transition: transform .2s linear;
+      img {
+         display: block;
+         transition: opacity .2s linear;
+      }
+   }
+      &:hover .about__content {
+         transform: translate(-10px, -10px);
+         opacity: 1;
+      }
+       &:hover .about__img {
+          transform: translate(-10px, -10px);
+          img {
+            opacity: .1;
+          }
+       }
+   
+       
+  
+   .about__content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      opacity: 0;
+      transition: opacity .3s linear;
+      transition: transform .2s linear;
+      
+      .about__icon {
+         align-self: center;
+      }
+      .about__text {
+         font-family: $fontSubtittle;
+         font-size: 18px;
+         font-weight: 700;
+         text-transform: uppercase;
+         color: $fontColor;
+      }
+   }
+}
+
+
+
+
