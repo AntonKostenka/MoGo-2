@@ -122,13 +122,13 @@ body {
   background: #e98c83 url("/img/intro.jpg") center/cover no-repeat;
 }
 
-.intro__tittle {
+.intro__title {
   max-width: 850px;
   margin: 0 auto;
   position: relative;
   padding: 50px 0;
 }
-.intro__tittle h2 {
+.intro__title h2 {
   font-family: "Kaushan Script", cursive;
   font-size: 72px;
   font-weight: 400;
@@ -136,7 +136,7 @@ body {
   text-align: center;
   margin-bottom: 30px;
 }
-.intro__tittle h1 {
+.intro__title h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 150px;
   font-weight: bold;
@@ -145,7 +145,7 @@ body {
   text-transform: uppercase;
   text-align: center;
 }
-.intro__tittle h1::after {
+.intro__title h1::after {
   content: "";
   display: block;
   width: 60px;
@@ -230,23 +230,28 @@ body {
   padding: 100px 0;
 }
 
+.section--device {
+  background: url("/img/device/background.png") center/cover no-repeat;
+  padding-bottom: 0;
+}
+
 .section__header {
   text-align: center;
   margin: 0 auto;
   width: 100%;
   width: 950px;
 }
-.section__header .section__suptittle {
+.section__header .section__suptitle {
   font-family: "Kaushan Script", cursive;
   font-size: 24px;
   margin-bottom: 20px;
 }
-.section__header .section__subtittle {
+.section__header .section__subtitle {
   font-family: "Montserrat", sans-serif;
   font-size: 30px;
   text-transform: uppercase;
 }
-.section__header .section__subtittle::after {
+.section__header .section__subtitle::after {
   content: "";
   display: block;
   height: 3px;
@@ -384,4 +389,23 @@ hr {
   margin: 50px 0;
   height: 1px;
   background-color: #e5e5e5;
+}
+
+.device {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ipad img {
+  transform: translate(-5%);
+}
+
+.iphone {
+  position: absolute;
+  bottom: -15%;
+  right: -10%;
 }

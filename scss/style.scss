@@ -45,7 +45,7 @@ body {
    padding-top: 50px;
    background: #e98c83 url('/img/intro.jpg') center/cover no-repeat;
 }
-.intro__tittle {
+.intro__title {
    max-width: 850px;
    margin: 0 auto;
    position: relative;
@@ -133,16 +133,21 @@ body {
    padding: 100px 0;
 
 }
+.section--device {
+   background: url('/img/device/background.png') center/cover no-repeat;
+   // height: 850px;
+   padding-bottom: 0;
+}
 .section__header {
    text-align: center;
    margin: 0 auto;
    width: 100%;
    width: 950px;
-   .section__suptittle {
+   .section__suptitle {
       @include sectionSupTittle;
       margin-bottom: 20px;
    }
-   .section__subtittle {
+   .section__subtitle {
       @include sectionSubTittle;
          &::after {
             @include line;
@@ -274,6 +279,26 @@ hr {
    height: 1px;
    background-color: #e5e5e5;
 }
+// Device
+.device {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   max-width: 600px;
+   margin: 0 auto;
+}
+.ipad {
+   img {
+      transform: translate(-5%);
+   }
+}
+.iphone {
+   position: absolute;
+   bottom: -15%;
+   right: -10%;
+}
+
 
 
 
