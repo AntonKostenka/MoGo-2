@@ -42,7 +42,8 @@ body {
    justify-content: center;
    width: 100%;
    height: 100vh;
-   padding-top: 50px;
+   padding-top: 100px;
+   padding-bottom: 100px;
    background: #e98c83 url('/img/intro.jpg') center/cover no-repeat;
 }
 .intro__title {
@@ -298,6 +299,91 @@ hr {
    bottom: -15%;
    right: -10%;
 }
+// Service2
+.service2 {
+   display: flex;
+   margin: 70px -10px;
+}
+.service2__item {
+   width: 50%;
+   padding: 0 10px;
+}
+.service2__picture {
+   height: 100%;
+}
+.accordion {
+      display: flex;
+      flex-direction: column;
+   }
+   .accordion__item {
+      @include accardionBorder;
+      margin-bottom: 10px;
+   }
+   .accordion__item.active .content__box{
+      display: block;
+   }
+   .accordion__item:last-child {
+      margin-bottom: 0;
+   }
+   .accordion__header {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 1px solid #e5e5e5;
+      
+      .accordion__title {
+         flex: 1 1 auto;
+         font-family: $fontSubtittle;
+         font-size: 14px;
+         font-weight: 400;
+         text-transform: uppercase;
+      }
+      .accordion__icon {
+         height: 30px;
+         margin-right: 15px;
+      }
+   }
+   .content__box {
+      display: none;
+      padding: 20px 25px;      
+   }
+   .accordion__content {
+      overflow-y: scroll;
+      max-height: 140px;
+      padding-right: 15px;
+      &::-webkit-scrollbar {
+            width: 4px;
+            /* ширина для вертикального скролла */
+            background-color: #f5f5f5;
+         }
+      &::-webkit-scrollbar-thumb {
+         background-color: $cardColor;
+         border-radius: 10px;
+         }
+         p {
+            font-family: 'Roboto', cursive;
+            font-style: italic;
+            font-weight: 300;
+            font-size: 15px;
+            color: $sectionTextColor;
+            line-height: 1.6;
+         }   
+   }
+
+.accordion__btn {
+   background: initial;
+   cursor: pointer;
+}
+.arrow--down {
+   img {
+      transform: rotate(180deg);
+   }
+   
+}
+
+
+
+
 
 
 

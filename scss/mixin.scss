@@ -93,3 +93,6 @@ font-size: 15px;
 color: $sectionTextColor;
 line-height: 1.6;
 }
+@mixin accardionBorder {
+   border: 1px solid #e5e5e5;
+}
